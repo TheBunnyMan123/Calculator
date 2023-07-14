@@ -24,8 +24,8 @@
         <!-- TODO: Make buttons work -->
         <TextBox Name="MainTextBox" Width="162.5" Margin="10" Watermark="Try typing 'pi' in here"></TextBox>
         <Grid HorizontalAlignment="Center" Margin="10" ColumnDefinitions="Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
-        <Button Click="OnButtonClick" Name="inparentheses" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="0" Grid.Column="0">﹙</Button>
-        <Button Click="OnButtonClick" Name="outparentheses" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="0" Grid.Column="1">﹚</Button>
+        <Button Click="OnButtonClick" Name="inparentheses" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="0" Grid.Column="0">(</Button>
+        <Button Click="OnButtonClick" Name="outparentheses" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="0" Grid.Column="1">)</Button>
         <Button Click="OnButtonClick" Name="exponent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="0" Grid.Column="2">^</Button>
         <Button Click="OnButtonClick" Name="add" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="0" Grid.Column="3">+</Button>
         <Button Click="OnButtonClick" Name="one" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="40" Height="30"  Grid.Row="1" Grid.Column="0">1</Button>
