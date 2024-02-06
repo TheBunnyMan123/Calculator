@@ -1,6 +1,7 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Input;
 using org.matheval;
 
 namespace Calculator;
@@ -10,6 +11,23 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    protected override void OnKeyDown(KeyEventArgs key) {
+	Console.WriteLine("Key pressed: " + key.Key);
+    	if (key.Key == Key.Enter) {
+	    var eq = this.FindControl<TextBox>("MainTextBox").Text;
+            var UserExpression = new Expression(eq);
+            try {
+                var ans = UserExpression.Eval();
+                Console.WriteLine(ans);
+                this.FindControl<TextBox>("MainTextBox").Text = ans.ToString();
+            }catch {
+                Console.WriteLine("Invalid Equation");
+                var ans = "Err: " + eq;
+                this.FindControl<TextBox>("MainTextBox").Text = ans.ToString();
+            } 
+	}
     }
 
     private void OnButtonClick(object sender, RoutedEventArgs EventArgs) {
